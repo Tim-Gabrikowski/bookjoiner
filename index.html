@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BookJoiner-Web</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+		<div id="cont_file_upload">
+			<p>Select Work File:</p>
+			<input type="file" id="file_sel"></input>
+			<input type="button" id="btn_upload" value="Upload">
+		</div>
+		<div id="cont_cur_book_data">
+			<p id="fld_progress"></p>
+			<label for="fld_title">Titel:</label>
+			<input type="text" id="fld_title">
+			<label for="fld_subtitle">Untertitel:</label>
+			<input type="text" id="fld_subtitle">
+			<label for="fld_author">Autor:</label>
+			<input type="text" id="fld_author">
+			<label for="fld_publisher">Verlag:</label>
+			<input type="text" id="fld_publisher">
+			<label for="fld_isbn">ISBN:</label>
+			<input type="text" id="fld_isbn">
+			<label for="fld_year">Erscheinungsjahr:</label>
+			<input type="text" id="fld_year">
+			<p id="fld_ids"></p>
+			<input type="button" id="btn_skip" value="Überspringen">
+			<input type="button" id="btn_new" value="Neu">
+			<input type="button" id="btn_save" value="Speichern">
+			<input type="button" id="btn_reset" value="Zurücksetzen">
+			<h2>Vorschläge:</h2>
+			<table id="cont_suggestions">
+
+			</table>
+		</div>
+		<div id="cont_congratulations">
+			<h1>CONGRATULATIONS, YOU ARE DONE</h1>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
