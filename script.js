@@ -221,6 +221,14 @@ function action_new() {
 	first_book();
 }
 
+function merge_books(idx)
+{
+	let obj = data.bnew[idx];
+	obj.ids = obj.ids.concat(data.old[0].ids);
+	data.old.shift();
+	first_book();
+}
+
 function first_book() {
 	if (data.old.length == 0) {
 		show(cont_congratulations);
