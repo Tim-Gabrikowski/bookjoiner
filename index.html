@@ -17,19 +17,49 @@
 		</div>
 		<div id="cont_cur_book_data">
 			<p id="fld_progress"></p>
-			<label for="fld_title">Titel:</label>
-			<input type="text" id="fld_title" />
-			<label for="fld_subtitle">Untertitel:</label>
-			<input type="text" id="fld_subtitle" />
-			<label for="fld_author">Autor:</label>
-			<input type="text" id="fld_author" />
-			<label for="fld_publisher">Verlag:</label>
-			<input type="text" id="fld_publisher" />
-			<label for="fld_isbn">ISBN:</label>
-			<input type="text" id="fld_isbn" />
-			<label for="fld_year">Erscheinungsjahr:</label>
-			<input type="text" id="fld_year" />
-			<p id="fld_ids"></p>
+			<div class="row_cont">
+				<div class="row_elem">
+					<p>Aktuelles Buch:</p>
+					<label for="fld_title">Titel:</label>
+					<input type="text" id="fld_title" />
+					<label for="fld_subtitle">Untertitel:</label>
+					<input type="text" id="fld_subtitle" />
+					<label for="fld_author">Autor:</label>
+					<input type="text" id="fld_author" />
+					<label for="fld_publisher">Verlag:</label>
+					<input type="text" id="fld_publisher" />
+					<label for="fld_isbn">ISBN:</label>
+					<input type="text" id="fld_isbn" />
+					<label for="fld_year">Erscheinungsjahr:</label>
+					<input type="text" id="fld_year" />
+					<p id="fld_ids"></p>
+				</div>
+				<div class="row_elem" id="cont_g_suggestions">
+					<p>Google Books Vorschlag:</p>
+					<div class="row_cont" id="cont_g_suggestions_data">
+						<div class="row_elem">
+							<label for="s_title">Titel:</label>
+							<input type="text" id="s_title" disabled />
+							<label for="s_subtitle">Untertitel:</label>
+							<input type="text" id="s_subtitle" disabled />
+							<label for="s_author">Autor:</label>
+							<input type="text" id="s_author" disabled />
+							<label for="s_publisher">Verlag:</label>
+							<input type="text" id="s_publisher" disabled />
+							<label for="s_isbn">ISBN:</label>
+							<input type="text" id="s_isbn" disabled />
+							<label for="s_year">Erscheinungsjahr:</label>
+							<input type="text" id="s_year" disabled />
+						</div>
+						<div class="row_elem" id="img_cont">
+							<img id="s_img" />
+						</div>
+					</div>
+					<input type="button" id="btn_s_last" value="<" />
+					<input type="button" id="btn_s_next" value=">" />
+					<input type="button" id="btn_s_take" value="Übernehmen" />
+				</div>
+			</div>
 			<input type="button" id="btn_skip" value="Überspringen" />
 			<input type="button" id="btn_new" value="Neu" />
 			<input type="button" id="btn_save" value="Speichern" />

@@ -9,6 +9,27 @@
 	padding: 5px;
 }
 
+#cont_g_suggestions input[type="text"] {
+	display: block;
+	width: 600px;
+	font-size: 16px;
+	border: 1px solid white;
+	background-color: black;
+	color: white;
+	margin: 0px 0px 5px 0px;
+	padding: 5px;
+}
+#s_img {
+	width: 250px;
+	object-fit: contain;
+	height: 100%;
+	margin: 5px;
+	border: 1px solid white;
+}
+#cont_g_suggestions_data {
+	height: 318px;
+}
+
 input[type="file"] {
 	display: none;
 }
@@ -60,6 +81,14 @@ input[type="button"]:hover {
 	color: black;
 	transition: 500ms;
 }
+input[type="button"]:disabled {
+	border: 1px dashed white;
+}
+
+input[type="button"]:disabled:hover {
+	background-color: black;
+	color: white;
+}
 
 table {
 	border-collapse: collapse;
@@ -72,4 +101,10 @@ th {
 td {
 	border: 1px solid white;
 	padding: 5px;
+}
+
+.row_cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
