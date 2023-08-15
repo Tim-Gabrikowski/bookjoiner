@@ -9,6 +9,25 @@
 	padding: 5px;
 }
 
+input[type="file"] {
+	display: none;
+}
+.custom-file-upload {
+	border: 1px solid white;
+	display: inline-block;
+	padding: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	color: white;
+	background-color: black;
+	transition: 500ms;
+}
+.custom-file-upload:hover {
+	color: black;
+	background-color: white;
+	transition: 500ms;
+}
+
 #cont_cur_book_data label {
 	font-size: 14px;
 	font-family: Arial, Helvetica, sans-serif;
