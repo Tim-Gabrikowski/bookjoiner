@@ -190,14 +190,16 @@ function update_suggestions(list) {
 }
 
 function is_suggestion(cur, obj) {
-	obj.ldist = 0;
-	return true;
+	obj.ldist =
+		levenshtein(cur.title, obj.title) + levenshtein(cur.subtitle, obj.subtitle);
+	return obj;
 }
 
 function get_suggestions(cur) {
 	return data.bnew
-		.filter((item) => is_suggestion(cur, item))
-		.sort((a, b) => a.ldist < b.ldist);
+		.map((item) => is_suggestion(cur, item))
+		.sort((a, b) => a.ldist - b.ldist)
+		.slice(0, 10);
 }
 
 function action_skip() {
