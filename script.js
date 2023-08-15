@@ -158,7 +158,9 @@ function update_suggestions(list) {
 
 	list.forEach((item) => {
 		str +=
-			"<tr>" +
+			'<tr onclick="merge_books(' +
+			item.index +
+			');">' +
 			"<td>" +
 			item.ldist +
 			"</td>" +
@@ -189,7 +191,8 @@ function update_suggestions(list) {
 	cont_suggestions.innerHTML = str;
 }
 
-function is_suggestion(cur, obj) {
+function is_suggestion(cur, obj, index) {
+	obj.index = index;
 	obj.ldist =
 		levenshtein(cur.title, obj.title) + levenshtein(cur.subtitle, obj.subtitle);
 	return obj;
@@ -197,7 +200,7 @@ function is_suggestion(cur, obj) {
 
 function get_suggestions(cur) {
 	return data.bnew
-		.map((item) => is_suggestion(cur, item))
+		.map((item, index) => is_suggestion(cur, item, index))
 		.sort((a, b) => a.ldist - b.ldist)
 		.slice(0, 10);
 }
@@ -223,8 +226,7 @@ function action_new() {
 	first_book();
 }
 
-function merge_books(idx)
-{
+function merge_books(idx) {
 	let obj = data.bnew[idx];
 	obj.ids = obj.ids.concat(data.old[0].ids);
 	data.old.shift();

@@ -98,6 +98,16 @@ th {
 	background-color: white;
 	color: black;
 }
+tr {
+	background-color: black;
+	color: white;
+	transition: 500ms;
+}
+tr:hover {
+	background-color: white;
+	color: black;
+	transition: 500ms;
+}
 td {
 	border: 1px solid white;
 	padding: 5px;
