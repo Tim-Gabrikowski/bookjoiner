@@ -1,0 +1,9 @@
+Data from Software (dbf)
+
+Convert in Libreoffice (to csv)
+
+Join data using bookjoiner (csv to json) (os_joined.json | us_joined.js)
+
+Convert to sorter format (json to json) using vorlage.json (os_joinerReady.json | us_joinerREady.json)
+
+cleanup using cleanup.js (json to json) (os_cleaned.js | us_cleaned.js)

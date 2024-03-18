@@ -244,7 +244,11 @@ function first_book() {
 		show(cont_cur_book_data);
 		let obj = data.old[0];
 		fillin_fields(obj);
-		update_suggestions(get_suggestions(obj));
+
+		let suggs = get_suggestions(obj);
+		if (suggs[0].ldist > 5) return action_new();
+		update_suggestions(suggs);
+
 		update_g_suggestions(obj);
 	}
 }
